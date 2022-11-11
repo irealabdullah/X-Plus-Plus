@@ -1,0 +1,82 @@
+//Assignment Operator:
+
+
+static void Assignmentoperator(Args _args) 
+{
+    int i,a;
+    i=100;
+    print i; //100
+    i==100;
+    print i; //200
+    i++;
+    print i; //201
+    i -=10;
+    print i; 
+}
+
+//Arithmetic Operator
+
+static void Arithimeticoperator(Args _args) 
+{
+    int i;
+    i=10 + 20;
+    print i;
+
+    i=20 - 10;
+    print i;
+
+    i = 10*20;
+    print i;
+
+    i=100/2;
+    print i;
+
+    i =100 div 21;
+    print i; // quotient = 4
+
+    i = 100 mod 21;
+    print i; // remainder = 16
+
+    i = 1<<4;
+    print i; // 1*2*2*2*2 = 16
+
+    i = 16>>4; // 16/2/2/2/2 = 1
+    print i;
+
+    pause;
+}
+
+//Relational Operator:
+
+static void RelationalOperator(Args _args) 
+{
+    boolean isTrueOrFalse;
+
+    //like
+    isTrueOrFalse = "Jones" like "Jo?es"; //left side expression should match right side expression
+
+    print isTrueOrFalse; //true
+
+    isTrueOrFalse = "Fabrikam, inc." like "Fa*"; // zero or more characters
+    print isTrueOrFalse; //true 
+    pause;
+}
+
+//Ternary Operator (?)
+
+static void TenaryOperator(Args _args) 
+{
+    int a = 100, b = 200, c;
+    c = (a>b)? 100 : 200;
+    print c; // 100
+
+    str s; 
+    s = (a>b)? "A is greater than B" : "A is less than B";
+    print s; // exp3 will execute
+    
+    s = ((a>100) ? ((b<200) ? "b>100" : "b<200") : "a<100"); 
+    print s;
+    //if exp1 is false it will jump to last - if exp1 is true it will jump to exp2 
+    //if exp2 is also true it will jump to exp3
+    pause;
+}

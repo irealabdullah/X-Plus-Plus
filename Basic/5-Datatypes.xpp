@@ -1,0 +1,149 @@
+
+//AnyType
+
+static void DataTypeAnyType(Args _args) // anytype can also be passed as argument
+{
+    anytype a,b; // must initialize
+    a = "Abdullah";
+    b = 20;
+    info(a);
+    info(StrFmt("%1",b));
+}
+
+
+//Boolean
+
+static void boolean(Args _args)
+{
+    boolean a;
+    boolean b,c,d;
+    boolean a1=true;
+    info(StrFmt("%1:%2:%3",b,c,a1)); // false:false:true
+
+    a=0;
+    b=1;
+    c=20;
+    info(StrFmt("%1:%2:%3",a,b,c)); // false:true:true
+    if (b==1)
+    {
+        info(StrFmt("true"));
+    }
+}
+
+//Integer
+
+//Real
+
+//Strings
+
+static void DataTypeString(Args _args)
+{
+    str z= "HI", zz="My name is Abdullah";
+
+    str name;
+    name = "Abdullah";
+
+    str 10 bb; //fixed length
+    bb= "0304164499";
+
+    str s;
+    s= @"This is
+    a demo of a string";
+
+    s = z + " " + zz; // Hi My name is Abdullah
+    info(s);
+}
+
+//Enum
+
+/*How to create a new Enum
+AOT>>Data Dictionary >> Base Enums >> New Elements
+First we create Enum
+ZDemoEnum
+• Empty
+• Rob
+• David
+• John
+How to Access Enum
+AOT>>jobs*/
+
+static void DataTypeEnum(Args _args)
+{
+    zDemoEnum demoEnum;
+    NoYes noYes;
+    demoEnum = zDemoEnum::David; //Access element inside base Enum
+    demoEnum = zDemoEnum::Rob;
+    demoEnum = zDemoEnum::John;
+    noYes = NoYes::Yes; //Access element
+    info(StrFmt("%1",demoEnum));
+    info(StrFmt("%1",noYes));
+}
+
+//Time Of Day
+
+static void DataTypeTOD(Args _args)
+{
+    TimeOfDay time1,time2,time3,time4;
+    str demoTime;
+
+    time1 = timeNow();
+    info(StrFmt("%1",time1)); // Show us in seconds
+
+    demoTime = time2str(time1,TimeSeparator::Auto,TimeFormat::Auto);
+    info(StrFmt("%1",demoTime)) // 02:43:43 pm
+
+    time2 = timeMax();
+    info(StrFmt("%1",time2)) //86399
+}
+
+
+//Dates
+
+static void DataTypeAnyType(Args _args)
+{
+date date1,date2,date3,date4;
+int tempDate;
+
+date1= 31\12\2019;
+info(StrFmt("%1",date1)); // 31/12/2019
+
+date2 = today();
+info(StrFmt("%1",date2)); // 5/22/2019
+
+date3 = systemDateGet();
+info(StrFmt("%1",date3)); // 5/22/2019
+
+date4= date2 + 10; //add 10 days
+info(StrFmt("%1",date3)); // 6/1/2019
+
+tempDate= dayOfMth(date2);
+info(StrFmt("%1",tempDate));
+
+tempDate= dayOfWk(date2);
+info(StrFmt("%1",tempDate));
+
+tempDate= dayOfYr(date2);
+info(StrFmt("%1",tempDate));
+}
+
+//Utcdatetime
+ static void DataTypeAnyType(Args _args)
+{
+    utcDateTime utcdatetime1,utcdatetime2,utcdatetime3,utcdatetime4;
+    str mystr;
+    info(StrFmt("%1",utcdatetime1)); // at first it is empty
+   
+    utcdatetime1= 2019-05-25T00:00:00;
+    info(StrFmt("%1",utcdatetime1)); // 5/25/2019 12:00:00 am
+    utcdatetime2 = utcDateTimeNull();
+    info(StrFmt("%1,",utcdatetime2)); //return null
+    utcdatetime3 = DateTimeUtil::utcNow();
+    info(StrFmt("%1,",utcdatetime3)); // 5/25/2019 12:00:00 am
+    utcdatetime4 = DateTimeUtil::getSystemDateTime();
+    info(StrFmt("%1,",utcdatetime4)); //show system Date time
+    utcdatetime4 = DateTimeUtil::minValue();
+    info(StrFmt("%1,",utcdatetime4));
+    utcdatetime4 = DateTimeUtil::maxValue();
+    info(StrFmt("%1,",utcdatetime4));
+
+}

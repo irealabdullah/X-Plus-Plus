@@ -1,0 +1,26 @@
+//Method overriding in X++
+
+//We made a class called AxDemoClass with 8 different methods
+
+// AxDemoClass(usr)
+
+// 1. getFirstName(usr)
+// 2. getLastName(usr)
+// 3. methodAdd(usr)
+// 4. methodSub(usr)
+// 5. setFirstName(usr)
+// 6. setLastName(usr)
+// 7. methodDiv(usr)
+// 8. methodMul(usr) 
+
+class MethodOverideClassDemo extends AxDemoClass // we extend/inherit the class
+{
+
+}
+
+// Now we right click on this --> MethodOverideClassDemo and 
+// press override we only see 6 methods but total methods are 8
+// why?? 
+
+// we are not able to override method 7 in subclass because it has keyword of "static"
+// we are not able to override method 4 in subclass because it has access modifier "private"

@@ -1,0 +1,94 @@
+//Conditional statements
+
+static void ConditionalStatements(Args _args) 
+{
+    int amount,total;
+    amount = 1000;
+    total = 2500;
+
+    if (amount==1000)
+        {
+            print 1000; // it is good for testing and no need for conversion
+        } 
+    pause;
+
+    if (amount == 1000)
+        {
+            print 1000; // it is good for testing and no need for conversion
+        } 
+    else
+        {
+            print "Amount is less than 1000 ";
+        }
+    pause;
+}
+
+
+
+
+static void ConditionalStatements(Args _args) 
+{
+    int amount,total;
+    amount = 100;
+    total = 2500;
+
+    if (total == 1000)
+        {
+            print 1000;
+        } 
+    else if(total == 1500)
+        {
+            print 1500;
+        }
+    else if(total==2500)
+        {
+            print 2500;
+        }
+    else
+        {
+            print "Total is not in out list";
+        }
+
+    pause;
+}
+
+
+//Nested if else if...
+
+static void ConditionalStatements(Args _args) 
+{
+    int amount,total;
+    amount = 100;
+    total = 2500;
+    counter = 10;
+
+    if (counter == 10)
+    {
+        if(amount==100)
+            {
+                if(total==1000)
+                {   
+                    print 1000;
+                }
+                else if(total == 1500)
+                {
+                    print 1500;
+                }
+                else if(total ==2500)
+                {
+                    print 2500;
+                }
+                else
+                {
+                    print "Total is not in our list";
+                }
+            }
+    }
+    
+    else 
+        {
+            print "Counter is not equal to 10";
+        }
+    
+    pause;
+}

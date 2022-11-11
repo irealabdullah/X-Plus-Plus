@@ -1,0 +1,34 @@
+// Break statements:
+
+
+static void BreakForLoop(Args _args) 
+{
+    int i;
+    
+    for ( i = 1 ; i < 10 ; i++)
+    {
+        print i; 
+        if(i==5)
+        {
+            break; // for loop terminates
+        }
+        pause;
+    }
+}
+
+
+static void BreakWhileLoop(Args _args) 
+{
+    int i;
+
+    while (i<10)
+        {
+            i++;
+            print i;
+            if (i==5)
+            {
+                break;
+            }
+            pause;
+        }
+}

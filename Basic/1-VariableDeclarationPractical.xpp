@@ -1,0 +1,27 @@
+//Variable Declaration Practical:
+
+//Single Line Variable Declaration
+
+static void VariableDeclaration(Args _args)
+{
+    int age;
+    str firstname;
+    boolean isPassed;
+    info(StrFmt("%1 - %2 - %3"),firstname,age,isPassed);
+    //Output
+    //0 - - false  
+}
+//-----------------------------------
+
+//Multi Line Variable Declaration
+static void VariableDeclaration(Args _args)
+{
+    int age;
+    str firstname;
+    boolean isPassed;
+    int a,b,c,d;
+    int e=20, f=20;
+    info(StrFmt("%1 - %2 - %3"),firstname,age,isPassed);
+   
+    str lastname; // cannot make variable after X++ statement  
+}

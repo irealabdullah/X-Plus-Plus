@@ -1,0 +1,29 @@
+// Implementing Interface:
+
+// We create SubClass
+// We are implementing interface below 
+
+class interfaceSubClassDemo implements InterfaceClassDemo
+{
+}
+
+//Now we are implementing interface below 
+
+public int add(int a,int b)
+{
+    return a + b;
+}
+
+public int sub(int a,int b)
+{
+    return a - b;
+}
+
+// We can also implement multiple interfaces Exp:
+class interfaceSubClassDemo implements I1,I2
+{
+}
+
+//Exp:
+//suppose we have blue print of house(interface) and house contains two rooms(methods)
+//Constructor who is building house has to build two rooms

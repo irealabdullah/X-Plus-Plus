@@ -1,0 +1,101 @@
+// Classes in X++
+
+/*
+AOT >> Classes >> Create New Class >> Rename Class >> Drag it to Project
+Properties>> RunOn >> Called From/Client/Server
+RunOn: (Where should the object be executed)
+1. Called from (whether it should called from server or client)
+2. Client (Classes going to execute on client)
+3. Server (Classes going to execute on server)
+We can also view code by right clicking 
+*/
+
+Class AxDemoClass 
+{
+    //Declared variables(Data)
+    int x; 
+    str firstName,lastName;
+    int age;
+}
+
+
+
+//Methods
+
+public int methodAdd(int a,int b)
+{
+    int result;
+    result = a + b;
+    return result;
+    pause;
+}
+
+public void methodSub(int a,int b)
+{
+    int result;
+    result = a - b;
+    print result;
+    pause;
+}
+
+//Method Modifier:
+
+
+ class AxDemoClass{}
+ public void methodAdd(int a,int b) {} //If we don’t use public By Default it is public 
+ private void methodAdd(int a,int b) {}
+ protected void methodAdd(int a,int b) {}
+ final void methodAdd(int a,int b) {}
+ void methodAdd(int a,int b) {}
+ static void methodAdd(int a, int b) {} // AxDemoClass::methodAdd(10,20);
+ static client void methodAdd(int a, int b) {}
+ static server void methodAdd(int a, int b) {}
+
+//Watch Method Modifiers Demo..
+
+
+// Access methods in a class
+// We use this a lot in our real time projects
+
+
+Class AxDemoClass 
+{
+    int x; 
+    str firstName,lastName;
+    int age;
+}
+public void setFirstName(str _firstName)
+    {
+        firstName = _firstName;
+    }
+
+public void setLastName(str _lastName)
+    {
+        lastName = _lastName;
+    }
+
+public str getFirstName()
+    {
+        return firstName;
+    }
+
+public str getLastName()
+    {
+        return lastName;
+    }
+
+//Then we create a new job >> rename job to job1
+static void job1(Args _args)
+{
+    AxDemoClass obj = new AxDemoClass();
+
+    //Setter
+    obj.setFirstName("Abdullah");
+    obj.setLastName("Tariq");
+
+    //Getter
+    print obj.getFirstName();
+    print obj.getLastName();
+    
+    pause;
+}

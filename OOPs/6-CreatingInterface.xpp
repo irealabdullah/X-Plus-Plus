@@ -1,0 +1,19 @@
+/*How to create Interface in X++?
+    ▪ Interface is a blueprint of what you want to build 
+    ▪ In interface we just give method signature/contains only abstract methods
+
+First we create a class >> we name it InterfaceClassDemo
+*/
+
+interface InterfaceClassDemo // We remove class keyword and replace it with interface
+{
+    //only signature is added
+}
+
+public int sub(int a,int b)
+{
+}
+
+public int add(int a,int b)
+{
+}

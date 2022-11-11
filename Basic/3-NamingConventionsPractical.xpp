@@ -1,0 +1,14 @@
+//Naming conventions Practical:
+
+static void NamingConventions(Args _args)
+{
+
+int age;
+
+CusTable cusTable; //logical name
+CusTable cusTable_1; // If we are taking multiple variable we use _1
+CusTable cusTable_2;
+CusTable cusTable_3;
+
+// code must be understandable by every one
+}

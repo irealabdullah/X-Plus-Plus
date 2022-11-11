@@ -1,0 +1,97 @@
+//Macros
+
+// Creating Macros/Directives in X++
+// AOT >> Macros
+/// AOT >> jobs
+static void Macros(Args _args) 
+{
+    str mName;
+    int mAge;
+
+    #define.MyName('I am Abdullah') // when we close the bracket macros get terminated
+    #define.MyAge(200) 
+
+    mName = #MyName;
+    mAge = #MyAge;
+
+    print mName; // I am Abdullah
+    print MyAge; // 200
+    pause;
+
+    //Important Points:
+        //Naming Convention in Macros 
+        //#define is in lowercase then (.) then MacroName // #define.MyAge(200) 
+        //we use Macroname Exp: MyName (First Letter must be uppercase)
+}
+
+
+// Create Our own custom Macros:
+// AOT >> Macros >> Right Click on Macros >> New Macros
+// Rename it to zDemoMacros(usr)
+
+#define.MyName('Demo Name') 
+#define.MyAge(50) 
+#define.DemoSalary(1000) 
+#define.DemoAddress('This is a demo Address') 
+
+//Now we go to jobs
+
+static void AccessMacros(Args _args) 
+{
+    str mName;
+    int mAge;
+    real mSalary;
+
+    #define.MyName('Demo Name') 
+    #define.MyAge(50)
+    #zDemoMacros // we can access this macro now 
+
+    mName = #MyName;
+    mAge = #MyAge;
+    mSalary = #DemoSalary; //We took this from above where we defined our macros already
+    
+    print mName;
+    print mAge;
+    print mSalary;
+    
+    pause;
+}
+
+
+//Macros if & ifNOT Conditions:
+
+static void DemoMacros(Args _args) 
+{
+    #define.MyIntMacro(100)
+    #if.MyIntMacro()
+    info(int2str(#MyIntMacro)); // 100
+
+    #if.MyIntMacro(100) //agar mera intmacro 100 hai tu print it out 
+    // IF WE CHANGE VALUE from 100 to 1000 IT WILL GIVE ERROR AS ABOVE 100 IS DEFINED
+    info(int2str(#MyIntMacro)); // 100
+
+    #ifNOT.MyIntMacro(120) // agar mera macro 120 nahi hai tu print it out 
+                          // agar same value dee ge tu error ayee ga [Conflict]
+    info(int2str(#MyIntMacro)); // 100
+
+    #ifNOT.MyInt() // if this is not there
+    info("NOT:" + int2str(#MyIntMacro)); // NOT: 100
+}
+
+
+//More on macros:
+    
+static void DemoMacros(Args _args) 
+{
+    #define.Debug()
+    #define.MyName('Demo')
+    print #linenumber; //Give us line number 43 when we use Debug
+    print #MyName; // Demo
+    print #myname; // Demo --> Macro name is not case sensitive (no difference as above)
+    pause; //
+
+    //Microsoft says to use UPPERCASE for macros name Exp: Myname
+    #define.myname('demo 1') 
+    print myname; //demo 1 // we can override by a name
+    pause;
+}

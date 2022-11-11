@@ -1,0 +1,47 @@
+//Abstract Class:
+
+// X++ Abstract Class 
+// We will learn about Sub-Class And Super Class in X++
+
+//First we make a new class >> Rename it to AxDemoClass
+
+abstract class AxDemoClass
+{
+    int addition,subtration;
+    str name; 
+    // we can declare variables in abstract class and 
+    // variables are accessible to other class if they extend to parent class
+}
+
+public abstract int sub(int a, int b)
+{
+    //base class will give body to abstract method 
+}
+
+public int add(int a,int b)
+{
+    return a + b;
+}
+
+
+//-----------------------------------------------------------------
+//Now we create a new class that will be child class of AxDemoClass
+
+class abstract subClassDemo extends AxDemoClass
+{
+} 
+
+//Now we must override methods in child class by right clicking and select add or sub methods
+public int sub(int a,int b) // see body is given to this method
+{
+    subtration = a - b;
+    return subtration;
+}
+
+public int add(int a,int b) // this is not compulsory as above this method is not abstract
+{
+    addition = a + b;
+    return addition;
+}
+
+

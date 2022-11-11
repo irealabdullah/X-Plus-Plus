@@ -1,0 +1,35 @@
+//List Collection:
+
+static void ContainerDatatypes(Args _args) 
+{
+    List listString = new List(Types::String); // created list for string type
+    List listInt = new List(Types::Integer); // created list for integer type
+    ListIterator listIterator; // we used List iterator which help in loop
+
+    //add string
+    listString.addEnd("A");
+    listString.addEnd("b");
+    listString.addEnd("c");
+
+    //add integer 
+    listInt.addEnd(1);
+    listInt.addEnd(2);
+    listInt.addEnd(4);
+    listInt.addStart(0); //add value to start
+    listIterator = new ListIterator(listString);
+
+    //loop 
+    while (listIterator.more())
+        {
+            info(listIterator.value()); //print values A b c
+            listIterator.next(); // next iteration
+        }
+    listIterator = new ListIterator(listInt);
+
+    //loop 
+    while (listIterator.more())
+        {
+            info(strFmt(listIterator.value())); //print values 0 1 2 4
+            listIterator.next(); // next iteration
+        }   
+}

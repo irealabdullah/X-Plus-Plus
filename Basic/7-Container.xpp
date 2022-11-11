@@ -1,0 +1,50 @@
+//Container
+
+static void ContainerDatatypes(Args _args) 
+{
+    Container con;
+    int i;
+    
+    con = [10,20,"Demo","Name",false];
+    
+    info(strFmt("%1",conPeek(con,1))); // show us 10
+    info(strFmt("%1",conPeek(con,2))); // show us 20
+    info(strFmt("%1 - %2",conPeek(con,1),conPeek(con,2))); //10:20
+    info(strFmt("%1 - %2 - %3",conPeek(con,1),conPeek(con,2),conPeek(con,3))); //10 - 20 - Demo
+    
+    // insert value to container
+    con += "Test"; // this is 6th after false 
+    con += "100"; // this is 7th after Test
+    
+    info(strFmt("%1 - %2 - %3",conPeek(con,5),conPeek(con,6),conPeek(con,7))); // false - Test - 100
+    
+    //How to Insert value in a Container?
+    con = conIns(con,1,"Abdullah"); //(container Name, index number position, Value)
+    info(strFmt("%1 - %2 - %3",conPeek(con,1),conPeek(con,2),conPeek(con,3))); // Abdullah - 10 - 20 // position changed
+    
+    // Abdullah is shifted to 1 and 10 is shifted to 2nd and 20 is shifted to 3rd and so on...
+    
+    //How to update value in a Container?
+    con = conPoke(con,1,1000) //(container Name, index number position, Value to update/replace)
+    info(strFmt("%1 - %2 - %3",conPeek(con,1),conPeek(con,2),conPeek(con,3))); // Abdullah is updated with 1000 - 10 -20
+    
+    //How to delete value in a Container?
+    con= conDel(con,1,2); // 1000 - 10 are deleted from container
+    info(strFmt("%1 - %2 - %3",conPeek(con,1),conPeek(con,2),conPeek(con,3))); // 20 - Demo - Name
+    
+    // For Exp: old result: 1000:10:20:Demo:Name
+    con= conDel(con,2,2); //10 20 will be deleted
+    // after this statement: 1000:Demo:Name
+    
+    //How to find values from a Container?
+    info(strFmt("%1",conFind(con,"Name"))); // Name is on 3 position output:3
+    
+    //How to clear values from a Container?
+    con = conNull();
+    info(strFmt("%1 - %2 - %3",conPeek(con,1),conPeek(con,2),conPeek(con,3))); // 0 - 0 - 0
+    
+    for (i = 1; i <= conLen(con); i++) //print all values from a container
+        {
+            info(strFmt("%1 - %2",i,conPeek(con,i))); // 1:1000 2:Demo 3:Name 4:false 5:Test 6:100
+        }
+}

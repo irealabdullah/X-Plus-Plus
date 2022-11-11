@@ -1,0 +1,28 @@
+/*What is variable scopes?
+• A scope defines the area in which an item can be accessed
+1. Instance variables declared in class declarations can be accessed from any method in the class and from methods
+that extend(inherit) the class
+2. local variables can be accessed only in the block in which they were defined all variables created by users
+have local scope
+*/
+
+//instance variable declared inside the class
+static void NamingConventions(Args _args)
+{
+int age;
+str first_name;
+}
+
+private void method()
+{
+age = 20;
+first_name = "Abdullah" // we can access inside class
+//we cannot access local variable here it will not show
+}
+
+//local variable
+private void LocalVariable()
+{
+int pinCode;
+pinCode = 2546;
+}

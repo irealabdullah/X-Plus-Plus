@@ -1,0 +1,30 @@
+// Exception Handling:
+
+
+static void job1(Args _args)
+{
+    system.String s = "Exception Handling";
+    str st;
+    system.Exception exception; //We are importing files from .Net Framework
+    try
+        {
+            info("We are in try block");
+            st = s.SubString(-1); // it will produce error as substring value > 0
+                                 // it will produce error and go to catch block
+                                // this is a CLRError
+        }
+
+    catch (Exception::Error) // we took enum 
+        {
+            info("We are in Catch Block");
+            info("Error got caught");
+        }
+
+    catch (Exception::CLRError) // we took enum 
+        {
+            // retry; // jump back to try block
+            exception = CLRInterop::getLastException();
+            info(Exception.ToString()); 
+            //After try block this catch block catches the error
+        }
+}

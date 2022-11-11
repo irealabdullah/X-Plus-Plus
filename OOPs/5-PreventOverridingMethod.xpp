@@ -1,0 +1,15 @@
+// Prevent Overriding Method:
+
+// We don't want Super Class's methods to be overridden in Sub/child Class ?
+
+// In previous lesson we saw that either we can use Private or static keyword 
+// With these keywords Super Class's methods will not override in child class
+
+// There is a problem with private keyword --> private methods are not overridden and they are not accessible outside class
+// We use final keyword with method --> final methods are not overridden but they are accessible outside class
+
+// Static methods are not overridden
+// Private methods are not overridden
+// final methods are not overridden
+
+

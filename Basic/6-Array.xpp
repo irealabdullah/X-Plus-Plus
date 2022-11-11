@@ -1,0 +1,32 @@
+//Array
+
+static void DataTypeAnyType(Args _args) 
+{
+    int array1[]; //dynamic
+    int array2[3]; // fixed
+    str array3[,100]; //partly on disk // hold up to 100 values in memory
+    str array3[100,20]; // hold up to 100 items and 20 stored in memory
+    int demo1,demo2,demo3;
+
+    array1[1] = 10; // In X++ Index number starts from 1
+    array1[2] = 20; 
+    array1[3] = 30; 
+
+    demo1 = array1[1]; // accessing value
+    info(strFmt("%1",demo1)); // output: 10
+
+    array2[1] = 10;
+    array2[2] = 20;
+    array2[3] = 30;
+    // array2[4] = 40; Error out of bound
+
+    for (demo2 = 1; demo2 <= 3 ; demo2++)
+        {
+            info(strFmt("%1",demo2)); // show us elements index 1,2,3,4
+        }
+    for (demo2 = 1; demo2 <= 3 ; demo2++)
+        {
+    info(strFmt("%1",array2[demo2])); // show us elements 10,20,30
+        }
+}
+C

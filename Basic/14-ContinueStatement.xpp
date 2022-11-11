@@ -1,0 +1,35 @@
+// Continue statements
+
+static void ContinueForLoop(Args _args) 
+{
+    int i;
+    for ( i = 1 ; i < 10 ; i++)
+    {
+    if(i==5)
+    {
+        continue; // skips the 5 and print 6 (skips the current iteration)
+    }
+    // when above condition is true, continue statement skip the current iteration and will not 
+    
+    // print i. It will go to For Loop directly
+    
+    print i; // we use print i here (use your head Abdullah)
+    pause;
+    }
+}
+
+static void ContinueWhileLoop(Args _args) 
+{
+    int i;
+    while (i<10)
+        {
+            i++;
+            if (i==5)
+            {
+                continue; // skips 5 and print 6 (same as it did in For loop)
+            }
+            
+        print i; // after continue statement executes it will not come here 
+        pause;
+    }
+}

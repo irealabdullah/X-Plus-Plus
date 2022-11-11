@@ -1,0 +1,64 @@
+//Switch statement
+
+static void SwitchStatements(Args _args) 
+{
+    int amount,total;
+    amount = 1500;
+    
+    switch (amount)
+    {
+        case 200:
+        break;
+        case 350:
+        break;
+        default:
+        print "No record found";
+        break;
+    }
+
+    pause;
+}
+
+
+static void SwitchStatements(Args _args) 
+{
+    int amount,total;
+    amount = 1500;
+
+switch (amount)
+    {
+        case 200:
+        break;
+
+        case 1500:
+        print 1500;
+        break; // if break is not written it will continue the flow 
+
+        default:
+        print "No record found";
+        break;
+    }
+    pause;
+}
+
+
+static void SwitchStatements(Args _args) 
+{
+    int amount,total;
+    amount = 350;
+
+    switch (amount) // we can also use string
+    {
+        case 350:
+        print 350;
+
+        case 1500:
+        print 1500;
+        break; //both 350 and 1500 will be printed as no break statement is used
+
+        default: 
+        print "No record found";
+        break;
+    }
+    pause;
+}
